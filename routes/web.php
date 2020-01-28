@@ -22,10 +22,10 @@ $router->get('/pemain/{id}','PemainController@show');
 
 //team
 $router->get('/team','TeamController@index');
-$router->post('/team','TeamController@store');  
+  
 $router->get('/team/{id}','TeamController@show');  
-$router->put('/team/{id}','TeamController@update'); 
-$router->delete('/team/{id}','TeamController@delete'); 
+ 
+ 
 
 //turnamen
 $router->get('/turnamen','TurnamenController@index');
@@ -67,4 +67,7 @@ Route::group(['middleware' => ['auth']], function ($router) {
     $router->post('/pemain','PemainController@store'); 
     $router->put('/pemain/{id}','PemainController@update');
     $router->delete('/pemain/{id}','PemainController@delete'); 
+    $router->post('/team','TeamController@store');
+    $router->put('/team/{id}','TeamController@update');
+    $router->delete('/team/{id}','TeamController@delete');
 });
