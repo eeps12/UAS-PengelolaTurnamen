@@ -21,39 +21,36 @@ $router->get('/pemain','PemainController@index');
 $router->get('/pemain/{id}','PemainController@show');  
 
 //team
-$router->get('/team','TeamController@index');
-  
+$router->get('/team','TeamController@index'); 
 $router->get('/team/{id}','TeamController@show');  
  
  
 
 //turnamen
 $router->get('/turnamen','TurnamenController@index');
-$router->post('/turnamen','TurnamenController@store');  
+ 
 $router->get('/turnamen/{id}','TurnamenController@show');  
-$router->put('/turnamen/{id}','TurnamenController@update'); 
-$router->delete('/turnamen/{id}','TurnamenController@delete');
+ 
+
 
 //pertandingan
 $router->get('/pertandingan','PertandinganController@index');
-$router->post('/pertandingan','PertandinganController@store');  
+ 
 $router->get('/pertandingan/{id}','PertandinganController@show');  
-$router->put('/pertandingan/{id}','PertandinganController@update'); 
-$router->delete('/pertandingan/{id}','PertandinganController@delete');
+ 
+
 
 //klasemen
 $router->get('/klasemen','KlasemenController@index');
-$router->post('/klasemen','KlasemenController@store');  
+  
 $router->get('/klasemen/{id}','KlasemenController@show');  
-$router->put('/klasemen/{id}','KlasemenController@update'); 
-$router->delete('/klasemen/{id}','KlasemenController@delete');
+
 
 //wasit
 $router->get('/wasit','WasitController@index');
-$router->post('/wasit','WasitController@store');  
+  
 $router->get('/wasit/{id}','WasitController@show');  
-$router->put('/wasit/{id}','WasitController@update'); 
-$router->delete('/wasit/{id}','WasitController@delete');
+
 
 
  //authentication  
@@ -70,4 +67,16 @@ Route::group(['middleware' => ['auth']], function ($router) {
     $router->post('/team','TeamController@store');
     $router->put('/team/{id}','TeamController@update');
     $router->delete('/team/{id}','TeamController@delete');
+    $router->post('/turnamen','TurnamenController@store'); 
+    $router->put('/turnamen/{id}','TurnamenController@update');
+    $router->delete('/turnamen/{id}','TurnamenController@delete');
+    $router->post('/pertandingan','PertandinganController@store'); 
+    $router->put('/pertandingan/{id}','PertandinganController@update');
+    $router->delete('/pertandingan/{id}','PertandinganController@delete');
+    $router->post('/klasemen','KlasemenController@store');
+    $router->put('/klasemen/{id}','KlasemenController@update'); 
+    $router->delete('/klasemen/{id}','KlasemenController@delete');
+    $router->post('/wasit','WasitController@store');
+    $router->put('/wasit/{id}','WasitController@update'); 
+    $router->delete('/wasit/{id}','WasitController@delete');
 });
