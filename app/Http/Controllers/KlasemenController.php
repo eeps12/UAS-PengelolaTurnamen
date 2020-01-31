@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
  class KlasemenController extends Controller  
  {  
-      public function index()  
+      public function index(Request $request)  
       {  
           $acceptHeader = $request->header('Accept');
 

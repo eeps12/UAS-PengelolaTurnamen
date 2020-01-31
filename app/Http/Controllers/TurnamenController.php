@@ -5,9 +5,8 @@ use Illuminate\Http\Request;
 
  class TurnamenController extends Controller  
  {  
-      public function index()  
+      public function index(Request $request)  
       {  
-
           $acceptHeader = $request->header('Accept');
 
           if ($acceptHeader === 'application/json')
