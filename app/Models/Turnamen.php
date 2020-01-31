@@ -15,6 +15,6 @@
 
       public function admin()
       {
-        return $this->hasMany(Admin::class, 'admin_id');
+        return $this->belongsTo(Admin::class, 'admin_id');
       }
  }  

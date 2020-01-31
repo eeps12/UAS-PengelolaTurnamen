@@ -38,7 +38,7 @@ use Illuminate\Http\Request;
                'wasit_id' => 'required',  
                'admin_id' => 'required',
                'turnamen_id' => 'required',
-               'waktu' => 'required|dateTime' 
+               'waktu' => 'required|date' 
           ];  
           $validator = \Validator::make($input, $validationRules);  
           if ($validator->fails()) {  
