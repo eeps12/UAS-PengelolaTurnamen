@@ -28,7 +28,6 @@ $router->get('/team/{id}','TeamController@show');
 
 //turnamen
 $router->get('/turnamen','TurnamenController@index');
- 
 $router->get('/turnamen/{id}','TurnamenController@show');  
  
 
@@ -48,7 +47,6 @@ $router->get('/klasemen/{id}','KlasemenController@show');
 
 //wasit
 $router->get('/wasit','WasitController@index');
-  
 $router->get('/wasit/{id}','WasitController@show');  
 
 

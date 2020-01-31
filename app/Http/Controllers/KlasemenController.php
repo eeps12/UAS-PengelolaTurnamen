@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
                if ($acceptHeader === 'application/json')
                {
                     return response()->json($klasemen->items('data'), 200);
-               }
+               }else
               {
                    return response('Not Acceptable!', 406);
               }
